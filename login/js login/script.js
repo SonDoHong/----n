@@ -100,14 +100,18 @@ $("#register-form").validate({
                         email: email,
                         password: password,
                         id: uuid,
-                    })
-                    .then(() => {
-                        loginFn(email, password);
-                    })
+                        })
+                        .then(() => {
+                            loginFn(email, password);
+                        })
 
-                    .catch((error) => {
+                        .catch((error) => {
 
                     });
+                
+                alert('Đăng ký thành công!!')
+                    
+
             })
             .catch((error) => {
                 console.log(error.code == 'auth/email-already-in-use')
@@ -153,6 +157,7 @@ var loginFn = function (email, password) {
         .auth()
         .signInWithEmailAndPassword(email, password)
         .then(function (result) {
+            alert('Đăng nhập thành công!!')
             const user = result.user;
 
             localStorage.setItem("user-do-an", JSON.stringify(user));

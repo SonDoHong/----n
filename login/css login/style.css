@@ -23,3 +23,17 @@ label.error {
     margin-top: 4px;
     display: inline-block;
 }
+
+#done {
+    display: inline-block;
+    color: #fff;
+    background-color: red;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    opacity: 0.8;
+}
+
+#done:hover {
+    opacity: 1;
+}

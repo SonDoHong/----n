@@ -17,18 +17,22 @@
             <div class="header-container">
                 <div class="header-logo"><a href="/index.html">HANOI FOOTBALL</a></div>
     
-                <div class="header-search">
-                    <input id="search" type="search">
-                    <label for="search">
-                        <i class="header-search-icon fa-solid fa-magnifying-glass"></i>
-                    </label>
-                </div>
+                <form  class="header-search">
+                    <input id="search" type="search" placeholder="Tìm kiếm sân bóng">
+                    <button type="submit" id="search-btn">
+                        <label for="search">
+                            <i class="header-search-icon fa-solid fa-magnifying-glass"></i>
+                        </label>
+                    </button>
+                </form >
     
                 <div class="header-user">
-                    <div class="header-user-login">Đăng nhập</div>
-                    <span class="header-user-icon">
-                        <i class="fa-solid fa-user"></i>
-                    </span>
+                    <a href="./login/login.html" class="header-user-link">
+                        <div class="header-user-login">Đăng nhập</div>
+                        <span class="header-user-icon">
+                            <i class="fa-solid fa-user"></i>
+                        </span>
+                    </a>
                 </div>
                 
                 <div class="header-user-2">
@@ -50,7 +54,7 @@
         <div class="container">
             <form class="orientation grid">
                 <div class="orientation-list grid_row">
-                    <div class="grid_col-3 grid_col-6 grid_col-full">
+                    <div class="grid_col-3 grid_col-6-l grid_col-full">
                         <div class="orientation-item">
                             Chọn Tỉnh/Thành phố
                             <span class="orientation-icon"><i class="fa-solid fa-caret-down"></i></span>
@@ -60,7 +64,7 @@
                         </div>
                     </div>
 
-                    <div class="grid_col-3 grid_col-6 grid_col-full">
+                    <div class="grid_col-3 grid_col-6-l grid_col-full">
                         <div class="orientation-item">
                             Chọn Quận/Huyện
                             <span class="orientation-icon"><i class="fa-solid fa-caret-down"></i></span>
@@ -72,14 +76,14 @@
                         </div>
                     </div>
 
-                    <div class="grid_col-3 grid_col-6 grid_col-full">
+                    <div class="grid_col-3 grid_col-6-l grid_col-full">
                         <div class="orientation-item">
                             Ngày:
                             <input type="date">
                         </div>
                     </div>
 
-                    <div class="grid_col-3 grid_col-6 grid_col-full">
+                    <div class="grid_col-3 grid_col-6-l grid_col-full">
                         <div class="orientation-item">
                             Giờ:
                             <input type="time">
@@ -134,10 +138,13 @@
     <script src="https://unpkg.com/geofirestore@5.2.0/dist/geofirestore.js"></script>
     <script src="https://cdn.firebase.com/libs/geofire/5.0.1/geofire.min.js"></script>
     <!-- <script type="module" src="./js/firebase.js"></script> -->
+    <script src="./js/listcard.js"></script>
+
+    <!-- file js search -->
+    <script src="./js/search.js"></script>
 
     <!-- Nhúng file js để kiểm tra user đã login hay chưa -->
     <script src="./js/index.js"></script>
     
-    <script src="./js/listcard.js"></script>
 </body>
 </html>

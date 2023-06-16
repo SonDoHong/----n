@@ -23,10 +23,10 @@ window.onload = function(e){
             }
         }else{
             // chưa login
-            if(window.location.pathname != '/login/register.html' && window.location.pathname != '/login/login.html'){
-                window.location.href = '/login/login.html';
-                // logOut(user)
-            }
+            // if(window.location.pathname != '/login/register.html' && window.location.pathname != '/login/login.html'){
+            //     window.location.href = '/login/login.html';
+            //     // logOut(user)
+            // }
         }
     }
 
@@ -64,7 +64,12 @@ window.onload = function(e){
         let logOutElm = document.querySelector('#log_out');
         logOutElm.addEventListener('click', function() {
             localStorage.clear();
-            return window.location.href = '/login/login.html';
+            let userEml = document.querySelector('.header-user')
+            let userEml2 = document.querySelector('.header-user-2');
+
+            userEml.style.display = 'flex';
+            userEml2.style.display = 'none';
+            // return window.location.href = '/login/login.html';
         });
     };
 

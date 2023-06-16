@@ -47,6 +47,7 @@
     width: 300px;
     border: 1px solid #ccc;
     border-radius: 999px;
+    overflow: hidden;
 }
 
 .header-search input {
@@ -55,20 +56,28 @@
     outline: none;
     border: none;
     padding: 8px 16px;
-    border-radius: 999px;
+}
+
+#search-btn {
+    /* background-color: #ccc; */
+    border: none;
+    outline: none;
 }
 
 .header-search-icon {
     font-size: 20px;
     color: #777;
-    padding: 4px 12px;
+    line-height: 34px;
+    padding: 0 12px;
     cursor: pointer;
 }
 
-.header-user {
+.header-user-link {
     display: flex;
     align-items: center;
     font-size: 16px;
+    text-decoration: none;
+    color: #333;
     cursor: pointer;
 }
 
@@ -302,6 +311,10 @@
 .card-item-price span {
     color: #F44A4A;
     font-weight: 600;
+}
+
+.card-item-infor p {
+    margin-top: 12px;
 }
 
 .card-item-footer {
